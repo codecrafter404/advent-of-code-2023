@@ -1,4 +1,5 @@
 pub mod day_1;
+pub mod day_2;
 
 pub trait Chellange {
     fn solve_first(&self, input: &str) -> color_eyre::Result<String>;

@@ -1,14 +1,17 @@
 use days::{Chellange, day_1::DayOne};
 
+use crate::days::day_2::DayTwo;
+
 pub mod days;
 
 
 fn main() -> color_eyre::Result<()> {
     let days: Vec<Box<dyn Chellange>> = vec![
-        Box::new(DayOne {})
+        Box::new(DayOne {}),
+        Box::new(DayTwo {}),
     ];
 
-    let current_day: u8 = 1;
+    let current_day: u8 = 2;
 
     let day = days.iter().filter(|x| x.get_day() == current_day).last().expect("Invalid day");
     
