@@ -1,6 +1,6 @@
 use days::{Chellange, day_1::DayOne};
 
-use crate::days::{day_2::DayTwo, day_3::DayThree};
+use crate::days::{day_2::DayTwo, day_3::DayThree, day_4::DayFour};
 
 pub mod days;
 
@@ -10,9 +10,10 @@ fn main() -> color_eyre::Result<()> {
         Box::new(DayOne {}),
         Box::new(DayTwo {}),
         Box::new(DayThree {}),
+        Box::new(DayFour {})
     ];
 
-    let current_day: u8 = 3;
+    let current_day: u8 = 4;
 
     let day = days.iter().filter(|x| x.get_day() == current_day).last().expect("Invalid day");
     
